@@ -10,3 +10,6 @@ before_install:
 
 script:
   - ./gradlew clean build -i --continue
+
+after_success:
+  - ./gradlew test jacocoTestReport coveralls
