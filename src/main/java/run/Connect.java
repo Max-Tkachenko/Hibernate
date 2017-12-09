@@ -11,7 +11,7 @@ public class Connect {
 
     public static void connect() throws ClassNotFoundException, SQLException {
         Class.forName(DRIVER);
-        connection = DriverManager.getConnection(URL, "max", "max12345");
+        connection = DriverManager.getConnection(URL, "user", "password");
         System.out.println("Connection successful...");
     }
 }
