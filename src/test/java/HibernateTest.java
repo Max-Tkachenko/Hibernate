@@ -78,21 +78,23 @@ public class HibernateTest {
         Main.createTables(new Configuration().configure().buildSessionFactory());
 
         ChatRunner chatRunner = new ChatRunner(new Configuration().configure().buildSessionFactory());
-        chatRunner.addChat(1, "Chat1", "2010-05-10");
+        chatRunner.addChat(4, "Chat1", "2010-05-10");
+        chatRunner.removeChat(4);
 
         NewsRunner newsRunner = new NewsRunner(new Configuration().configure().buildSessionFactory());
-        newsRunner.addNews(1,2,"2010-05-10", "News1");
+        newsRunner.addNews(4,2,"2010-05-10", "News1");
+        newsRunner.removeNews(4);
 
         NotificationRunner notificationRunner = new NotificationRunner(new Configuration().configure().buildSessionFactory());
-        notificationRunner.addNote(1,2,"Note");
-
-        MessageRunner messageRunner = new MessageRunner(new Configuration().configure().buildSessionFactory());
-        messageRunner.addMessage(1,2,1, "2010-05-10", "Hello Message!!!");
+        notificationRunner.addNote(4,2,"Note");
+        notificationRunner.removeNote(4);
 
         UserRunner userRunner = new UserRunner(new Configuration().configure().buildSessionFactory());
-        userRunner.addUser(1, "Max", "Shevchuk", 23);
+        userRunner.addUser(4, "Max", "Shevchuk", 23);
+        userRunner.removeUser(4);
 
         UsersChatsRunner usersChatsRunner = new UsersChatsRunner(new Configuration().configure().buildSessionFactory());
-        usersChatsRunner.addUsersChats(2,2,1);
+        usersChatsRunner.addUsersChats(4,2,1);
+        usersChatsRunner.removeUsersChats(4);
     }
 }

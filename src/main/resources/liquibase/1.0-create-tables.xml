@@ -10,7 +10,7 @@
         <sql>
             CREATE TABLE UsersH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             name TEXT DEFAULT NULL,
             surname TEXT DEFAULT NULL,
             age INT DEFAULT NULL,
@@ -19,7 +19,7 @@
 
             CREATE TABLE ChatsH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             name TEXT DEFAULT NULL,
             dateOfCreating DATE DEFAULT NULL,
             PRIMARY KEY(id)
@@ -27,7 +27,7 @@
 
             CREATE TABLE UsersChatsH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             userId INT NOT NULL REFERENCES UsersH.id,
             chatId INT NOT NULL REFERENCES ChatsH.id,
             PRIMARY KEY(id)
@@ -35,7 +35,7 @@
 
             CREATE TABLE NotificationsH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             userId INT NOT NULL REFERENCES UsersH.id,
             context TEXT DEFAULT NULL,
             PRIMARY KEY(id)
@@ -43,7 +43,7 @@
 
             CREATE TABLE UserMessagesH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             userId INT NOT NULL REFERENCES UsersH.id,
             chatId INT NOT NULL REFERENCES ChatsH.id,
             departureDate TIMESTAMP NOT NULL,
@@ -53,7 +53,7 @@
 
             CREATE TABLE NewsH
             (
-            id INT NOT NULL AUTO_INCREMENT,
+            id INT NOT NULL,
             chatId INT NOT NULL REFERENCES ChatsH.id,
             dateOfCreating TIMESTAMP NOT NULL,
             context TEXT DEFAULT NULL,
