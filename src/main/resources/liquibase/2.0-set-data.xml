@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
+        logicalFilePath="1.0-create-tables.xml">
+    <changeSet id="set_data" author="max">
+
+        <insert tableName="UsersH">
+            <column name="id" value="1"></column>
+            <column name="name" value="Max"></column>
+            <column name="surname" value="Tkachenko"></column>
+            <column name="age" value="19"></column>
+        </insert>
+        <insert tableName="UsersH">
+            <column name="id" value="2"></column>
+            <column name="name" value="Sasha"></column>
+            <column name="surname" value="Yurchuk"></column>
+            <column name="age" value="18"></column>
+        </insert>
+        <insert tableName="UsersH">
+            <column name="id" value="3"></column>
+            <column name="name" value="Valeria"></column>
+            <column name="surname" value="Lozovaya"></column>
+            <column name="age" value="17"></column>
+        </insert>
+
+        <insert tableName="ChatsH">
+            <column name="id" value="1"></column>
+            <column name="name" value="KPI Chan"></column>
+            <column name="dateOfCreating" value="2010-05-10"></column>
+        </insert>
+        <insert tableName="ChatsH">
+            <column name="id" value="2"></column>
+            <column name="name" value="KPI Live"></column>
+            <column name="dateOfCreating" value="2009-03-12"></column>
+        </insert>
+        <insert tableName="ChatsH">
+            <column name="id" value="3"></column>
+            <column name="name" value="FICT online"></column>
+            <column name="dateOfCreating" value="2013-12-24"></column>
+        </insert>
+
+        <insert tableName="UsersChatsH">
+            <column name="id" value="1"></column>
+            <column name="userId" value="1"></column>
+            <column name="chatId" value="2"></column>
+        </insert>
+        <insert tableName="UsersChatsH">
+            <column name="id" value="2"></column>
+            <column name="userId" value="1"></column>
+            <column name="chatId" value="3"></column>
+        </insert>
+        <insert tableName="UsersChatsH">
+            <column name="id" value="3"></column>
+            <column name="userId" value="3"></column>
+            <column name="chatId" value="1"></column>
+        </insert>
+
+        <insert tableName="UserMessagesH">
+            <column name="id" value="1"></column>
+            <column name="userId" value="1"></column>
+            <column name="chatId" value="1"></column>
+            <column name="departureDate" value="2014-05-23 19:52:10"></column>
+            <column name="context" value="Привет!"></column>
+        </insert>
+        <insert tableName="UserMessagesH">
+            <column name="id" value="2"></column>
+            <column name="userId" value="1"></column>
+            <column name="chatId" value="1"></column>
+            <column name="departureDate" value="2015-04-23 19:48:10"></column>
+            <column name="context" value="Как дела?"></column>
+        </insert>
+        <insert tableName="UserMessagesH">
+            <column name="id" value="3"></column>
+            <column name="userId" value="2"></column>
+            <column name="chatId" value="3"></column>
+            <column name="departureDate" value="2016-12-23 13:12:09"></column>
+            <column name="context" value="Норм)))"></column>
+        </insert>
+        <insert tableName="UserMessagesH">
+            <column name="id" value="4"></column>
+            <column name="userId" value="1"></column>
+            <column name="chatId" value="3"></column>
+            <column name="departureDate" value="2016-07-23 15:23:54"></column>
+            <column name="context" value="Сделал лабу по СУБД?))"></column>
+        </insert>
+        <insert tableName="UserMessagesH">
+            <column name="id" value="5"></column>
+            <column name="userId" value="3"></column>
+            <column name="chatId" value="2"></column>
+            <column name="departureDate" value="2014-06-23 10:34:10"></column>
+            <column name="context" value="Привет, бро)"></column>
+        </insert>
+        <insert tableName="UserMessagesH">
+            <column name="id" value="6"></column>
+            <column name="userId" value="3"></column>
+            <column name="chatId" value="1"></column>
+            <column name="departureDate" value="2017-05-23 07:44:35"></column>
+            <column name="context" value="Идешь на пару?"></column>
+        </insert>
+
+        <insert tableName="NewsH">
+            <column name="id" value="1"></column>
+            <column name="chatId" value="1"></column>
+            <column name="dateOfCreating" value="2014-05-23 19:52:10"></column>
+            <column name="context" value="Шутка про ГБ2"></column>
+        </insert>
+        <insert tableName="NewsH">
+            <column name="id" value="2"></column>
+            <column name="chatId" value="2"></column>
+            <column name="dateOfCreating" value="2015-04-23 19:48:10"></column>
+            <column name="context" value="Голосование за ГБ2"></column>
+        </insert>
+        <insert tableName="NewsH">
+            <column name="id" value="3"></column>
+            <column name="chatId" value="2"></column>
+            <column name="dateOfCreating" value="2016-07-23 15:23:54"></column>
+            <column name="context" value="Олимпиада с математики"></column>
+        </insert>
+
+        <insert tableName="NotificationsH">
+            <column name="id" value="1"></column>
+            <column name="userId" value="2"></column>
+            <column name="context" value="КР с вышки 22.09"></column>
+        </insert>
+        <insert tableName="NotificationsH">
+            <column name="id" value="2"></column>
+            <column name="userId" value="2"></column>
+            <column name="context" value="Лаба СУБД на пятницу"></column>
+        </insert>
+        <insert tableName="NotificationsH">
+            <column name="id" value="3"></column>
+            <column name="userId" value="1"></column>
+            <column name="context" value="Лаба №3 по СП"></column>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
